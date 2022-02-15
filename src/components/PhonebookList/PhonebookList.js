@@ -13,4 +13,14 @@ const PhonebookList = props => {
   );
 };
 
+PhonebookList.propTypes = {
+  contacts: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      number: PropTypes.string.isRequired,
+    }).isRequired
+  ).isRequired,
+};
+
 export default PhonebookList;
