@@ -1,0 +1,15 @@
+.Label {
+  color: #312244ff;
+  font-size: 20px;
+}
+
+.Input {
+  color: #006466ff;
+  padding: 2px 6px;
+  margin-left: 10px;
+  font-size: 18px;
+  background-color: #272640ff;
+  border: 1px solid #312244ff;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}

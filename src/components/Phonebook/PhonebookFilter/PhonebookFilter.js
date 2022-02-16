@@ -1,11 +1,17 @@
 import PropTypes from 'prop-types';
+import styles from './PhonebookFilter.module.css';
 
 const PhonebookFilter = props => {
   const { value, onChange } = props;
   return (
-    <label>
+    <label className={styles.Label}>
       Who you gonna call?
-      <input type="text" value={value} onChange={onChange} />
+      <input
+        className={styles.Input}
+        type="text"
+        value={value}
+        onChange={onChange}
+      />
     </label>
   );
 };

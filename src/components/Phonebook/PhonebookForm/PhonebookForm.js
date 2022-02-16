@@ -1,12 +1,17 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { nanoid } from 'nanoid';
+import styles from './PhonebookForm.module.css';
 
 class PhonebookForm extends Component {
+  static defaultProps = {
+    initialInputName: '',
+    initialInputNumber: '',
+  };
+
   state = {
-    filter: '',
-    name: 'Malina the Sour Demon',
-    number: '333-9-333',
+    name: this.props.initialInputName,
+    number: this.props.initialInputNumber,
   };
 
   onInputChange = evt => {
@@ -31,13 +36,15 @@ class PhonebookForm extends Component {
     const generateNumberId = nanoid();
 
     return (
-      <form onSubmit={this.addContactTo}>
-        <label>
+      <form className={styles.Form} onSubmit={this.addContactTo}>
+        <label className={styles.Label}>
           Name:
           <input
+            className={styles.Input}
             type="text"
             name="name"
             value={this.state.name}
+            placeholder="Enter demon name"
             pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
             title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
             id={generateNameId}
@@ -46,11 +53,13 @@ class PhonebookForm extends Component {
           />
         </label>
 
-        <label>
+        <label className={styles.Label}>
           Number:
           <input
+            className={styles.Input}
             type="tel"
             name="number"
+            placeholder="000-0-000"
             value={this.state.number}
             pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
             title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
@@ -59,7 +68,9 @@ class PhonebookForm extends Component {
             required
           />
         </label>
-        <button type="submit">Add new contact</button>
+        <button className={styles.Button} type="submit">
+          Add new contact
+        </button>
       </form>
     );
   }

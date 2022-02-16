@@ -1,0 +1,29 @@
+.List {
+  padding: 0;
+  margin: 0;
+}
+
+.List__Item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  border: 1px solid #312244ff;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+}
+
+.Button {
+  padding: 5px 10px;
+  font-size: 14px;
+  color: #272640ff;
+  background-color: #065a60ff;
+  border: 1px solid #0b525bff;
+  box-shadow: 4px 2px 2px #006466ff;
+  transition: box-shadow 500ms ease-in-out;
+  cursor: pointer;
+}
+
+.Button:hover {
+  box-shadow: 5px 2px 2px #144552ff;
+}
