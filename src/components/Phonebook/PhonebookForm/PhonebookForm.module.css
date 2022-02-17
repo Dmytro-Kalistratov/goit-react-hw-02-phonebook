@@ -3,34 +3,36 @@
   flex-direction: column;
   padding: 20px;
   align-items: center;
-  border: 2px solid #144552ff;
-  box-shadow: 15px 5px 15px #0b525bff;
-  background-color: #212f45ff;
+  border: 2px solid #007899;
+  box-shadow: 15px 5px 15px rgba(0, 0, 0, 0.5);
+  background-color: #172c4e;
 }
 
 .Label {
   display: flex;
-  color: #006466ff;
+  color: #009597;
   font-size: 20px;
   margin-bottom: 10px;
 }
 
 .Input {
-  color: #006466ff;
+  color: #009497e7;
   padding: 2px 6px;
   margin-left: 10px;
   font-size: 18px;
-  background-color: #272640ff;
-  border: 1px solid #312244ff;
+
+  background-color: #2520a575;
+  border: 1px solid #110050;
 }
 
 .Button {
   padding: 10px 20px;
   font-size: 18px;
-  color: #272640ff;
-  background-color: #065a60ff;
-  border: 1px solid #0b525bff;
-  box-shadow: 4px 2px 2px #144552ff;
+  color: #0011a8;
+  background-color: #0098a3;
+  border: 2px solid #000e8b;
+  border-radius: 10px;
+  box-shadow: 4px 2px 2px #00000080;
   transition: box-shadow 500ms ease-in-out;
   cursor: pointer;
 }
